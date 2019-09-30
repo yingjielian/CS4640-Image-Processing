@@ -1,0 +1,13 @@
+RGB = imread('map1.jpg');
+gray = rgb2gray(RGB);
+r=RGB(:,:,1);
+g=RGB(:,:,2);
+b=RGB(:,:,3);
+rV=r(:);
+bV=b(:);
+gV=g(:);
+mat=[rV,gV,bV];
+grayVector = gray(:);
+grayVector = double(grayVector);
+mat = double(mat);
+x = grayVector\mat;
